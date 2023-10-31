@@ -85,7 +85,7 @@ next_button.click()
 
 # CNP
 cnp_w_input = driver.find_element(By.ID, 'ctl00_ContentHolder_W_CNP')
-cnp_w_input.send_keys(CNP_H)
+cnp_w_input.send_keys(CNP_W)
 
 # Name
 name_w_input = driver.find_element(By.ID, 'ctl00_ContentHolder_W_Firstname')
