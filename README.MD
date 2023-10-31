@@ -50,6 +50,10 @@ Always keep your sensitive information and credentials secure and do not share t
 
 ## License
 
- to be added
+This project is licensed under the [Apache License 2.0](LICENSE).
+
+
+Be sure to add the LICENSE file with the Apache License 2.0 text to your project directory.
+
 
 
