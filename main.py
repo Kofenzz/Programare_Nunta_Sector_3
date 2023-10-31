@@ -1,9 +1,9 @@
 import time
 
+from decouple import config
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
-from decouple import config
 
 # Retrive Global Variables from .env file
 
@@ -12,16 +12,16 @@ EMAIL = config('EMAIL')
 CNP_H = config('CNP_H')
 NAME_H = config('NAME_H')
 PRENUME_H = config('PRENUME_H')
+COUNTY_H = config('COUNTY_H')
+TOWN_VILLAGE_H = config('TOWN_VILLAGE_H')
 ADRESA_H = config('ADRESA_H')
 
 CNP_W = config('CNP_W')
 NAME_W = config('NAME_W')
 PRENUME_W = config('PRENUME_W')
-COUNTY_W =  config('COUNTY_W')
+COUNTY_W = config('COUNTY_W')
 TOWN_VILLAGE_W = config('TOWN_VILLAGE_W')
 ADRESA_W = config('ADRESA_W')
-
-
 
 # Driver
 driver = webdriver.Firefox()
@@ -33,7 +33,7 @@ driver.get("https://casatorii.primarie3.ro/Programare.aspx")
 
 ## Start Input
 # Date Selector
-TARGET_DATE_TEXT = '16' # wirte what date you need
+TARGET_DATE_TEXT = '16'  # wirte what date you need
 
 time.sleep(1)
 
@@ -42,7 +42,7 @@ date_element.click()
 
 # Hour Selector
 
-TARGET_HOUR_TEXT = '12:00' # write what hour you need
+TARGET_HOUR_TEXT = '12:00'  # write what hour you need
 hour_element = driver.find_element(By.XPATH, f"//td[text()='{TARGET_HOUR_TEXT}']")
 hour_element.click()
 
@@ -72,6 +72,16 @@ name_h_input.send_keys(NAME_H)
 # Prenume
 prenume_h_input = driver.find_element(By.ID, 'ctl00_ContentHolder_H_Lastname')
 prenume_h_input.send_keys(PRENUME_H)
+
+# County
+county_dropdown_h = driver.find_element(By.ID, 'ctl00_ContentHolder_H_County')
+county_selector_h = Select(county_dropdown_h)
+county_selector_h.select_by_value(COUNTY_H)
+
+# Town/Village
+town_village_h = driver.find_element(By.ID, 'ctl00_ContentHolder_H_Locality')
+town_village_selector_h = Select(town_village_h)
+town_village_selector_h.select_by_value(TOWN_VILLAGE_H)
 
 # Adresa
 adresa_h_input = driver.find_element(By.ID, 'ctl00_ContentHolder_H_Home')
@@ -111,10 +121,7 @@ adresa_w_input = driver.find_element(By.ID, 'ctl00_ContentHolder_W_Home')
 adresa_w_input.send_keys(ADRESA_W)
 
 # Click Consent
-consent_input = driver.find_element(By.ID,'ctl00_ContentHolder_Check_Terms')
+consent_input = driver.find_element(By.ID, 'ctl00_ContentHolder_Check_Terms')
 consent_input.click()
 
 ## END
-
-
-
