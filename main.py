@@ -33,7 +33,7 @@ driver.get("https://casatorii.primarie3.ro/Programare.aspx")
 
 ## Start Input
 # Date Selector
-TARGET_DATE_TEXT = '17'
+TARGET_DATE_TEXT = '16' # wirte what date you need
 
 time.sleep(1)
 
@@ -42,8 +42,7 @@ date_element.click()
 
 # Hour Selector
 
-TARGET_HOUR_TEXT = '11:30' # write what hour you need
-TARGET_HOUR_TEXT = '11:45' # write what hour you need
+TARGET_HOUR_TEXT = '12:00' # write what hour you need
 hour_element = driver.find_element(By.XPATH, f"//td[text()='{TARGET_HOUR_TEXT}']")
 hour_element.click()
 
