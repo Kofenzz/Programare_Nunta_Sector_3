@@ -24,8 +24,8 @@ Before running the script, make sure you have the following:
    CNP_H=1111111111111
    NAME_H=LastName
    PRENUME_H=FirstName
-   COUNTY_W=COUNTY
-   TOWN_VILLAGE_W=TOWN
+   COUNTY_H=COUNTY
+   TOWN_VILLAGE_H=TOWN
    ADRESA_H=ADDRESS
    
    CNP_W=1111111111111
