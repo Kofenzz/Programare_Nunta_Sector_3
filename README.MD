@@ -21,6 +21,7 @@ Before running the script, make sure you have the following:
 
    PHONE_NUMBER=000000000000
    EMAIL=email@email.com
+   
    CNP_H=1111111111111
    NAME_H=LastName
    PRENUME_H=FirstName
