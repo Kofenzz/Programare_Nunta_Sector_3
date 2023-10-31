@@ -1,4 +1,4 @@
-# Selenium Web Automation Script for makeing a reservation for wedding
+# Selenium Web Automation Script for making a reservation for wedding
 
 This Python script uses the Selenium library to automate interactions with a specific website, filling out various forms. The script is designed for a particular use case, and it uses environment variables for sensitive information.
 
